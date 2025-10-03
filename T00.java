@@ -17,7 +17,7 @@ public class T00 {
         }
         sisa = b % 2;
         if (sisa == 0) {
-            System.out.println("Bilangan kedua : Genap");
+            System.out.println("Bilangan kedua: Genap");
         } else {
             System.out.println("Bilangan kedua: Ganjil");
         }
@@ -31,10 +31,10 @@ public class T00 {
             }
         }
         if (a % 2 == 0 && b % 2 == 0) {
-            System.out.println(" Hasil penjumlahan: " + a + b);
+            System.out.println("Hasil penjumlahan: " + a + b);
         } else {
             if (a % 2 != 0 && b % 2 != 0) {
-                System.out.println(" Hasil perkalian: " + a * b);
+                System.out.println("Hasil perkalian: " + a * b);
             } else {
                 if (a % 2 != 0 && b % 2 == 0) {
                     System.out.println("Berbeda Jenis");
