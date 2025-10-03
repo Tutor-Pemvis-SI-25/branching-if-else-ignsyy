@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
 <flowgorithm fileversion="4.2">
     <attributes>
-        <attribute name="name" value="latihan tutor"/>
-        <attribute name="authors" value="WINDOWS 11"/>
+        <attribute name="name" value="TU01"/>
+        <attribute name="authors" value="user"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-10-03 02:09:19 PM"/>
-        <attribute name="created" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDE7MDg6MjA6NDIgUE07MjkzMA=="/>
-        <attribute name="edited" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDM7MDI6MDM6NTEgUE07MztBU1VTO0xBUFRPUC1GTDM1RU5FTzsyMDI1LTEwLTAxOzA4OjIxOjQ5IFBNO1QwMFsyXS5mcHJnOzY2OTU="/>
-        <attribute name="edited" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDM7MDI6MDk6MTkgUE07MTE7MzA5NA=="/>
+        <attribute name="saved" value="2025-10-03 03:31:08 PM"/>
+        <attribute name="created" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMTswODoyNjo0NiBQTTsyODQ3"/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMTswODoyNjo1MyBQTTsxO3VzZXI7TEFQVE9QLVNLRVJPR0pNOzIwMjUtMDktMDI7MDk6MDY6MzYgUE07Z2FuamlsIGdlbmFwLmZwcmc7NzU4Ng=="/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMzswMzozMTowOCBQTTs1OzI5NTA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="a, b, tambah, kali" type="Integer" array="False" size=""/>
+            <declare name="a, b, sisa" type="Integer" array="False" size=""/>
             <input variable="a"/>
             <input variable="b"/>
-            <if expression="a MOD 2 == 0">
+            <assign variable="sisa" expression="a mod 2"/>
+            <if expression="sisa=0">
                 <then>
                     <output expression="&quot;Bilangan pertama: Genap&quot;" newline="True"/>
                 </then>
@@ -23,49 +24,53 @@
                     <output expression="&quot;Bilangan pertama: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
-            <if expression="b MOD 2 == 0">
+            <assign variable="sisa" expression="b mod 2"/>
+            <if expression="sisa=0">
                 <then>
-                    <output expression="&quot;Bilangan kedua: Genap&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan kedua : Genap&quot;" newline="True"/>
                 </then>
                 <else>
                     <output expression="&quot;Bilangan kedua: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
-            <if expression="a&gt;b">
+            <if expression="a=b">
                 <then>
-                    <output expression="&quot;Bilangan pertama lebih besar&quot;" newline="True"/>
+                    <output expression="&quot;kedua bilangan sama besar&quot;" newline="True"/>
                 </then>
                 <else>
-                    <if expression="a&lt;b">
+                    <if expression="a&gt;b">
                         <then>
-                            <output expression="&quot;Bilangan kedua lebih besar&quot;" newline="True"/>
+                            <output expression="&quot;Bilangan pertama lebih besar&quot;" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;Kedua bilangan sama besar&quot;" newline="True"/>
+                            <output expression="&quot;Bilangan kedua lebih besar&quot;" newline="True"/>
                         </else>
                     </if>
                 </else>
             </if>
-            <if expression="a MOD 2 == 0">
+            <if expression="a mod 2=0 and b mod 2=0">
                 <then>
-                    <if expression="b MOD 2 == 0">
-                        <then>
-                            <assign variable="tambah" expression="a + b"/>
-                            <output expression="&quot;Hasil penjumlahan: &quot; &amp; tambah" newline="True"/>
-                        </then>
-                        <else>
-                            <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
-                        </else>
-                    </if>
+                    <output expression="&quot; Hasil penjumlahan: &quot;&amp;a+b" newline="True"/>
                 </then>
                 <else>
-                    <if expression="b MOD 2 != 0">
+                    <if expression="a mod 2!=0 and b mod 2 !=0">
                         <then>
-                            <assign variable="kali" expression="a * b"/>
-                            <output expression="&quot;Hasil perkalian: &quot; &amp; kali" newline="True"/>
+                            <output expression="&quot; Hasil perkalian: &quot;&amp; a*b" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
+                            <if expression="a mod 2!=0 and b mod 2=0">
+                                <then>
+                                    <output expression="&quot;Berbeda Jenis&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="a mod 2=0 and b mod 2!=0">
+                                        <then>
+                                            <output expression="&quot;Berbeda Jenis&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
                         </else>
                     </if>
                 </else>
