@@ -4,11 +4,11 @@
         <attribute name="name" value="TU01"/>
         <attribute name="authors" value="user"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-10-03 03:36:10 PM"/>
+        <attribute name="saved" value="2025-10-03 03:41:10 PM"/>
         <attribute name="created" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMTswODoyNjo0NiBQTTsyODQ3"/>
         <attribute name="edited" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMTswODoyNjo1MyBQTTsxO3VzZXI7TEFQVE9QLVNLRVJPR0pNOzIwMjUtMDktMDI7MDk6MDY6MzYgUE07Z2FuamlsIGdlbmFwLmZwcmc7NzU4Ng=="/>
         <attribute name="edited" value="dXNlcjtMQVBUT1AtU0tFUk9HSk07MjAyNS0xMC0wMzswMzozMTowOCBQTTs1OzI5NTA="/>
-        <attribute name="edited" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAzOzAzOjM2OjEwIFBNOzE7MjM4NA=="/>
+        <attribute name="edited" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAzOzAzOjQxOjEwIFBNOzI7MjM4MQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -61,12 +61,12 @@
                         <else>
                             <if expression="a mod 2!=0 and b mod 2=0">
                                 <then>
-                                    <output expression="&quot;Berbeda Jenis&quot;" newline="True"/>
+                                    <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
                                 </then>
                                 <else>
                                     <if expression="a mod 2=0 and b mod 2!=0">
                                         <then>
-                                            <output expression="&quot;Berbeda Jenis&quot;" newline="True"/>
+                                            <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
                                         </then>
                                         <else/>
                                     </if>

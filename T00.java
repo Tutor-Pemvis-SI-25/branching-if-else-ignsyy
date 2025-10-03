@@ -37,10 +37,10 @@ public class T00 {
                 System.out.println("Hasil perkalian: " + a * b);
             } else {
                 if (a % 2 != 0 && b % 2 == 0) {
-                    System.out.println("Berbeda Jenis");
+                    System.out.println("Berbeda jenis");
                 } else {
                     if (a % 2 == 0 && b % 2 != 0) {
-                        System.out.println("Berbeda Jenis");
+                        System.out.println("Berbeda jenis");
                     }
                 }
             }
