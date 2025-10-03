@@ -22,7 +22,7 @@ public class T00 {
             System.out.println("Bilangan kedua: Ganjil");
         }
         if (a == b) {
-            System.out.println("kedua bilangan sama besar");
+            System.out.println("Kedua bilangan sama besar");
         } else {
             if (a > b) {
                 System.out.println("Bilangan pertama lebih besar");
