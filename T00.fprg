@@ -1,77 +1,71 @@
 <?xml version="1.0"?>
 <flowgorithm fileversion="4.2">
     <attributes>
-        <attribute name="name" value="del"/>
-        <attribute name="authors" value="ignac"/>
+        <attribute name="name" value="latihan tutor"/>
+        <attribute name="authors" value="WINDOWS 11"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-10-03 09:30:45 AM"/>
-        <attribute name="created" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAxOzA4OjIxOjAxIFBNOzIyNzM="/>
-        <attribute name="edited" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAzOzA5OjMwOjQ1IEFNOzM7MjM3OQ=="/>
+        <attribute name="saved" value="2025-10-03 02:09:19 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDE7MDg6MjA6NDIgUE07MjkzMA=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDM7MDI6MDM6NTEgUE07MztBU1VTO0xBUFRPUC1GTDM1RU5FTzsyMDI1LTEwLTAxOzA4OjIxOjQ5IFBNO1QwMFsyXS5mcHJnOzY2OTU="/>
+        <attribute name="edited" value="V0lORE9XUyAxMTtSQUZBRUxTSVNFTU9TOzIwMjUtMTAtMDM7MDI6MDk6MTkgUE07MTE7MzA5NA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="bil1, bil2, total, tambah, kali" type="Integer" array="False" size=""/>
-            <output expression="&quot;Input bilangan 1 : &quot;" newline="True"/>
-            <input variable="bil1"/>
-            <if expression="bil1 %2 == 0">
+            <declare name="a, b, tambah, kali" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <if expression="a MOD 2 == 0">
                 <then>
-                    <output expression="&quot;Merupakan bilangan genap&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan pertama: Genap&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Merupakan bilangan ganjil&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan pertama: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
-            <output expression="&quot;Input bilangan 2 : &quot;" newline="True"/>
-            <input variable="bil2"/>
-            <if expression="bil2 %2 == 0">
+            <if expression="b MOD 2 == 0">
                 <then>
-                    <output expression="&quot;Merupakan bilangan genap&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan kedua: Genap&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Merupakan bilangan ganjil&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan kedua: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
-            <if expression="bil1 &gt; bil2">
+            <if expression="a&gt;b">
                 <then>
-                    <if expression="bil1 = bil2">
+                    <output expression="&quot;Bilangan pertama lebih besar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a&lt;b">
                         <then>
-                            <output expression="&quot;Angka bernilai sama = &quot;&amp;bil2" newline="True"/>
+                            <output expression="&quot;Bilangan kedua lebih besar&quot;" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;Angka terbesar = &quot;&amp;bil1" newline="True"/>
+                            <output expression="&quot;Kedua bilangan sama besar&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="a MOD 2 == 0">
+                <then>
+                    <if expression="b MOD 2 == 0">
+                        <then>
+                            <assign variable="tambah" expression="a + b"/>
+                            <output expression="&quot;Hasil penjumlahan: &quot; &amp; tambah" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
                         </else>
                     </if>
                 </then>
                 <else>
-                    <output expression="&quot;Angka terbesar = &quot;&amp;bil2" newline="True"/>
-                </else>
-            </if>
-            <if expression="bil1 mod 2=0 and bil2 mod 2=0">
-                <then>
-                    <assign variable="tambah" expression="bil1 + bil2"/>
-                    <output expression="&quot;Bilangan 1 + bilangan 2 = &quot;&amp;tambah" newline="True"/>
-                </then>
-                <else>
-                    <if expression="bil1 mod 2!=0 and bil2 mod 2!=0">
+                    <if expression="b MOD 2 != 0">
                         <then>
-                            <assign variable="kali" expression="bil1*bil2"/>
-                            <output expression="&quot;Bilangan 1 * bilangan 2 = &quot;&amp;kali" newline="True"/>
+                            <assign variable="kali" expression="a * b"/>
+                            <output expression="&quot;Hasil perkalian: &quot; &amp; kali" newline="True"/>
                         </then>
                         <else>
-                            <if expression="bil1 mod 2=0 and bil2 mod 2!=0">
-                                <then>
-                                    <output expression="&quot;Merupakan bilangan berbeda jenis&quot;" newline="True"/>
-                                </then>
-                                <else>
-                                    <if expression="bil1 mod 2!=0 and bil2 mod 2=0">
-                                        <then>
-                                            <output expression="&quot;Merupakan bilangan berbeda jenis&quot;" newline="True"/>
-                                        </then>
-                                        <else/>
-                                    </if>
-                                </else>
-                            </if>
+                            <output expression="&quot;Berbeda jenis&quot;" newline="True"/>
                         </else>
                     </if>
                 </else>

@@ -10,39 +10,39 @@ public class T00 {
         System.out.println("Input bilangan 1 : ");
         bil1 = Integer.parseInt(input.nextLine());
         if (bil1 % 2 == 0) {
-            System.out.println("Merupakan bilangan genap");
+            System.out.println("Bilangan pertama: Genap");
         } else {
-            System.out.println("Merupakan bilangan ganjil");
+            System.out.println("Bilangan pertama: Ganjil");
         }
         System.out.println("Input bilangan 2 : ");
         bil2 = Integer.parseInt(input.nextLine());
         if (bil2 % 2 == 0) {
-            System.out.println("Merupakan bilangan genap");
+            System.out.println("Bilangan pertama: Genap");
         } else {
-            System.out.println("Merupakan bilangan ganjil");
+            System.out.println("Bilangan pertama: Ganjil");
         }
         if (bil1 > bil2) {
             if (bil1 == bil2) {
-                System.out.println("Angka bernilai sama = " + bil2);
+                System.out.println("Kedua bilangan sama besar");
             } else {
-                System.out.println("Angka terbesar = " + bil1);
+                System.out.println("Bilangan pertama lebih besar");
             }
         } else {
-            System.out.println("Angka terbesar = " + bil2);
+            System.out.println("Bilangan kedua lebih besar");
         }
         if (bil1 % 2 == 0 && bil2 % 2 == 0) {
             tambah = bil1 + bil2;
-            System.out.println("Bilangan 1 + bilangan 2 = " + tambah);
+            System.out.println("Hasil penjumlahan: " + tambah);
         } else {
             if (bil1 % 2 != 0 && bil2 % 2 != 0) {
                 kali = bil1 * bil2;
-                System.out.println("Bilangan 1 * bilangan 2 = " + kali);
+                System.out.println("Hasil perkalian: " + kali);
             } else {
                 if (bil1 % 2 == 0 && bil2 % 2 != 0) {
-                    System.out.println("Merupakan bilangan berbeda jenis");
+                    System.out.println("Kedua bilangan sama besar");
                 } else {
                     if (bil1 % 2 != 0 && bil2 % 2 == 0) {
-                        System.out.println("Merupakan bilangan berbeda jenis");
+                        System.out.println("Kedua bilangan sama besar");
                     }
                 }
             }
