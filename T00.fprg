@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="del"/>
+        <attribute name="authors" value="ignac"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-03 09:30:45 AM"/>
+        <attribute name="created" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAxOzA4OjIxOjAxIFBNOzIyNzM="/>
+        <attribute name="edited" value="aWduYWM7SUdOQUNJQTsyMDI1LTEwLTAzOzA5OjMwOjQ1IEFNOzM7MjM3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil1, bil2, total, tambah, kali" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input bilangan 1 : &quot;" newline="True"/>
+            <input variable="bil1"/>
+            <if expression="bil1 %2 == 0">
+                <then>
+                    <output expression="&quot;Merupakan bilangan genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Merupakan bilangan ganjil&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Input bilangan 2 : &quot;" newline="True"/>
+            <input variable="bil2"/>
+            <if expression="bil2 %2 == 0">
+                <then>
+                    <output expression="&quot;Merupakan bilangan genap&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Merupakan bilangan ganjil&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="bil1 &gt; bil2">
+                <then>
+                    <if expression="bil1 = bil2">
+                        <then>
+                            <output expression="&quot;Angka bernilai sama = &quot;&amp;bil2" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Angka terbesar = &quot;&amp;bil1" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Angka terbesar = &quot;&amp;bil2" newline="True"/>
+                </else>
+            </if>
+            <if expression="bil1 mod 2=0 and bil2 mod 2=0">
+                <then>
+                    <assign variable="tambah" expression="bil1 + bil2"/>
+                    <output expression="&quot;Bilangan 1 + bilangan 2 = &quot;&amp;tambah" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bil1 mod 2!=0 and bil2 mod 2!=0">
+                        <then>
+                            <assign variable="kali" expression="bil1*bil2"/>
+                            <output expression="&quot;Bilangan 1 * bilangan 2 = &quot;&amp;kali" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="bil1 mod 2=0 and bil2 mod 2!=0">
+                                <then>
+                                    <output expression="&quot;Merupakan bilangan berbeda jenis&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="bil1 mod 2!=0 and bil2 mod 2=0">
+                                        <then>
+                                            <output expression="&quot;Merupakan bilangan berbeda jenis&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
